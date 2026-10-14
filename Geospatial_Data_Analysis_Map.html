@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6f0fb7303963acb29af25de54252bb46 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6f0fb7303963acb29af25de54252bb46" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6f0fb7303963acb29af25de54252bb46 = L.map(
+                "map_6f0fb7303963acb29af25de54252bb46",
+                {
+                    center: [22.5, 79.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_24a65b6262069a964fb3c9750574609d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_24a65b6262069a964fb3c9750574609d.addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var marker_b746e1b24cce4f059eb9e9a18a967220 = L.marker(
+                [19.076, 72.8777],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_f76a17000be42c8ad4fd2f0669c2d22a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6453fd82b9a9d4703abeaddb4b9cc5e5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f43a9afcde0f648d52b859da5643e7a5 = $(`<div id="html_f43a9afcde0f648d52b859da5643e7a5" style="width: 100.0%; height: 100.0%;">     <b>Mumbai, Maharashtra</b><br>     Postal Code: 400001<br>     Revenue: ₹1,250,000<br>     Users: 5,200<br>     Revenue/User: ₹240.38<br>     Underserved Score: 0.500     </div>`)[0];
+                popup_6453fd82b9a9d4703abeaddb4b9cc5e5.setContent(html_f43a9afcde0f648d52b859da5643e7a5);
+            
+        
+
+        marker_b746e1b24cce4f059eb9e9a18a967220.bindPopup(popup_6453fd82b9a9d4703abeaddb4b9cc5e5)
+        ;
+
+        
+    
+    
+            marker_b746e1b24cce4f059eb9e9a18a967220.bindTooltip(
+                `<div>
+                     Mumbai — ₹1,250,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b746e1b24cce4f059eb9e9a18a967220.setIcon(icon_f76a17000be42c8ad4fd2f0669c2d22a);
+            
+    
+            var marker_a551ad137476badaa7416ca9cb11d8e6 = L.marker(
+                [18.5204, 73.8567],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_e5284cd0aa414f65555cb0cd9e6197d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6f5ed519f5003922b69ccd04006dfe2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_00cb65fab0dcc8a51531d5c74bf2ace5 = $(`<div id="html_00cb65fab0dcc8a51531d5c74bf2ace5" style="width: 100.0%; height: 100.0%;">     <b>Pune, Maharashtra</b><br>     Postal Code: 411001<br>     Revenue: ₹980,000<br>     Users: 4,300<br>     Revenue/User: ₹227.91<br>     Underserved Score: 0.475     </div>`)[0];
+                popup_c6f5ed519f5003922b69ccd04006dfe2.setContent(html_00cb65fab0dcc8a51531d5c74bf2ace5);
+            
+        
+
+        marker_a551ad137476badaa7416ca9cb11d8e6.bindPopup(popup_c6f5ed519f5003922b69ccd04006dfe2)
+        ;
+
+        
+    
+    
+            marker_a551ad137476badaa7416ca9cb11d8e6.bindTooltip(
+                `<div>
+                     Pune — ₹980,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a551ad137476badaa7416ca9cb11d8e6.setIcon(icon_e5284cd0aa414f65555cb0cd9e6197d4);
+            
+    
+            var marker_8dd44521b3ea1713860f854859d0e6a5 = L.marker(
+                [23.0225, 72.5714],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_94424fd8b4b0ca4631687b8630af4195 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01f0e411ffae4ec7ffe2ed3b49a5d8ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c42c93d20d4d31b82f8196a85154a36 = $(`<div id="html_9c42c93d20d4d31b82f8196a85154a36" style="width: 100.0%; height: 100.0%;">     <b>Ahmedabad, Gujarat</b><br>     Postal Code: 380001<br>     Revenue: ₹760,000<br>     Users: 3,500<br>     Revenue/User: ₹217.14<br>     Underserved Score: 0.450     </div>`)[0];
+                popup_01f0e411ffae4ec7ffe2ed3b49a5d8ab.setContent(html_9c42c93d20d4d31b82f8196a85154a36);
+            
+        
+
+        marker_8dd44521b3ea1713860f854859d0e6a5.bindPopup(popup_01f0e411ffae4ec7ffe2ed3b49a5d8ab)
+        ;
+
+        
+    
+    
+            marker_8dd44521b3ea1713860f854859d0e6a5.bindTooltip(
+                `<div>
+                     Ahmedabad — ₹760,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8dd44521b3ea1713860f854859d0e6a5.setIcon(icon_94424fd8b4b0ca4631687b8630af4195);
+            
+    
+            var marker_7e17f792aef415c244ed1293f5ff367e = L.marker(
+                [21.1702, 72.8311],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_3146d9399007bbce1e0691078c8cdbcf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d2113a6fd0adc2c481e6f501c106b88 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_badb7fce37bc3bd6499dad9cf5159f37 = $(`<div id="html_badb7fce37bc3bd6499dad9cf5159f37" style="width: 100.0%; height: 100.0%;">     <b>Surat, Gujarat</b><br>     Postal Code: 395003<br>     Revenue: ₹610,000<br>     Users: 3,200<br>     Revenue/User: ₹190.62<br>     Underserved Score: 0.500     </div>`)[0];
+                popup_7d2113a6fd0adc2c481e6f501c106b88.setContent(html_badb7fce37bc3bd6499dad9cf5159f37);
+            
+        
+
+        marker_7e17f792aef415c244ed1293f5ff367e.bindPopup(popup_7d2113a6fd0adc2c481e6f501c106b88)
+        ;
+
+        
+    
+    
+            marker_7e17f792aef415c244ed1293f5ff367e.bindTooltip(
+                `<div>
+                     Surat — ₹610,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7e17f792aef415c244ed1293f5ff367e.setIcon(icon_3146d9399007bbce1e0691078c8cdbcf);
+            
+    
+            var marker_cfd1e554befdfa9886c459f3a960c227 = L.marker(
+                [22.7196, 75.8577],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_223ad60721a1b0c7c25bba24ac133a62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_456365668e806f940a52b3cd985e539e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_161cf49aa623b9689ad8694a21f8375f = $(`<div id="html_161cf49aa623b9689ad8694a21f8375f" style="width: 100.0%; height: 100.0%;">     <b>Indore, Madhya Pradesh</b><br>     Postal Code: 452001<br>     Revenue: ₹420,000<br>     Users: 2,600<br>     Revenue/User: ₹161.54<br>     Underserved Score: 0.450     </div>`)[0];
+                popup_456365668e806f940a52b3cd985e539e.setContent(html_161cf49aa623b9689ad8694a21f8375f);
+            
+        
+
+        marker_cfd1e554befdfa9886c459f3a960c227.bindPopup(popup_456365668e806f940a52b3cd985e539e)
+        ;
+
+        
+    
+    
+            marker_cfd1e554befdfa9886c459f3a960c227.bindTooltip(
+                `<div>
+                     Indore — ₹420,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cfd1e554befdfa9886c459f3a960c227.setIcon(icon_223ad60721a1b0c7c25bba24ac133a62);
+            
+    
+            var marker_3df2f5c7e0b854d7064aa0034ecf386b = L.marker(
+                [23.2599, 77.4126],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_ce326dc366982a678de61ef804b47d71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f82c2748101709623d05a9e7efb793c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99760902acc69df4b7d3667e271587a2 = $(`<div id="html_99760902acc69df4b7d3667e271587a2" style="width: 100.0%; height: 100.0%;">     <b>Bhopal, Madhya Pradesh</b><br>     Postal Code: 462001<br>     Revenue: ₹360,000<br>     Users: 2,300<br>     Revenue/User: ₹156.52<br>     Underserved Score: 0.400     </div>`)[0];
+                popup_5f82c2748101709623d05a9e7efb793c.setContent(html_99760902acc69df4b7d3667e271587a2);
+            
+        
+
+        marker_3df2f5c7e0b854d7064aa0034ecf386b.bindPopup(popup_5f82c2748101709623d05a9e7efb793c)
+        ;
+
+        
+    
+    
+            marker_3df2f5c7e0b854d7064aa0034ecf386b.bindTooltip(
+                `<div>
+                     Bhopal — ₹360,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3df2f5c7e0b854d7064aa0034ecf386b.setIcon(icon_ce326dc366982a678de61ef804b47d71);
+            
+    
+            var marker_3c6c2a5ffe207c5e1e1b7949c27bccf5 = L.marker(
+                [26.9124, 75.7873],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_cf772ecb076c021221eb69af7f2f0ae2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_966c5160ad506110d96f79bda9a0cf70 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_510864fe7ab1f8676b98ed5701d26776 = $(`<div id="html_510864fe7ab1f8676b98ed5701d26776" style="width: 100.0%; height: 100.0%;">     <b>Jaipur, Rajasthan</b><br>     Postal Code: 302001<br>     Revenue: ₹470,000<br>     Users: 2,900<br>     Revenue/User: ₹162.07<br>     Underserved Score: 0.500     </div>`)[0];
+                popup_966c5160ad506110d96f79bda9a0cf70.setContent(html_510864fe7ab1f8676b98ed5701d26776);
+            
+        
+
+        marker_3c6c2a5ffe207c5e1e1b7949c27bccf5.bindPopup(popup_966c5160ad506110d96f79bda9a0cf70)
+        ;
+
+        
+    
+    
+            marker_3c6c2a5ffe207c5e1e1b7949c27bccf5.bindTooltip(
+                `<div>
+                     Jaipur — ₹470,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c6c2a5ffe207c5e1e1b7949c27bccf5.setIcon(icon_cf772ecb076c021221eb69af7f2f0ae2);
+            
+    
+            var marker_f77576d3e2f582af25adabe8e1c79d45 = L.marker(
+                [24.5854, 73.7125],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_e18a47646380afdea85ff7b983fbd19b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b01a4745523232dac5eb9c5fd241391 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4a9a73834d2ef6de4093cd63861c59b3 = $(`<div id="html_4a9a73834d2ef6de4093cd63861c59b3" style="width: 100.0%; height: 100.0%;">     <b>Udaipur, Rajasthan</b><br>     Postal Code: 313001<br>     Revenue: ₹155,000<br>     Users: 1,700<br>     Revenue/User: ₹91.18<br>     Underserved Score: 0.375     </div>`)[0];
+                popup_9b01a4745523232dac5eb9c5fd241391.setContent(html_4a9a73834d2ef6de4093cd63861c59b3);
+            
+        
+
+        marker_f77576d3e2f582af25adabe8e1c79d45.bindPopup(popup_9b01a4745523232dac5eb9c5fd241391)
+        ;
+
+        
+    
+    
+            marker_f77576d3e2f582af25adabe8e1c79d45.bindTooltip(
+                `<div>
+                     Udaipur — ₹155,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f77576d3e2f582af25adabe8e1c79d45.setIcon(icon_e18a47646380afdea85ff7b983fbd19b);
+            
+    
+            var marker_8a81170e4a71b57ff19dbf4acea022f1 = L.marker(
+                [12.9716, 77.5946],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_4c22c4eccab8b0c22b136976de50b527 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fb21a2bf431dcceb55376044dad9e9a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f6c788423373ccc5618749bcfe02f80b = $(`<div id="html_f6c788423373ccc5618749bcfe02f80b" style="width: 100.0%; height: 100.0%;">     <b>Bengaluru, Karnataka</b><br>     Postal Code: 560001<br>     Revenue: ₹1,180,000<br>     Users: 5,100<br>     Revenue/User: ₹231.37<br>     Underserved Score: 0.500     </div>`)[0];
+                popup_2fb21a2bf431dcceb55376044dad9e9a.setContent(html_f6c788423373ccc5618749bcfe02f80b);
+            
+        
+
+        marker_8a81170e4a71b57ff19dbf4acea022f1.bindPopup(popup_2fb21a2bf431dcceb55376044dad9e9a)
+        ;
+
+        
+    
+    
+            marker_8a81170e4a71b57ff19dbf4acea022f1.bindTooltip(
+                `<div>
+                     Bengaluru — ₹1,180,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8a81170e4a71b57ff19dbf4acea022f1.setIcon(icon_4c22c4eccab8b0c22b136976de50b527);
+            
+    
+            var marker_6a14e33d811cb7bad5b51deb369a3c6a = L.marker(
+                [12.2958, 76.6394],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_37aec0e64ab903c7937dc6051f79b5c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e980d08dea389e7d6f70fc654e2739f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_97c53b9ff9073cf5bda7469006afbb67 = $(`<div id="html_97c53b9ff9073cf5bda7469006afbb67" style="width: 100.0%; height: 100.0%;">     <b>Mysuru, Karnataka</b><br>     Postal Code: 570001<br>     Revenue: ₹190,000<br>     Users: 2,100<br>     Revenue/User: ₹90.48<br>     Underserved Score: 0.475     </div>`)[0];
+                popup_0e980d08dea389e7d6f70fc654e2739f.setContent(html_97c53b9ff9073cf5bda7469006afbb67);
+            
+        
+
+        marker_6a14e33d811cb7bad5b51deb369a3c6a.bindPopup(popup_0e980d08dea389e7d6f70fc654e2739f)
+        ;
+
+        
+    
+    
+            marker_6a14e33d811cb7bad5b51deb369a3c6a.bindTooltip(
+                `<div>
+                     Mysuru — ₹190,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a14e33d811cb7bad5b51deb369a3c6a.setIcon(icon_37aec0e64ab903c7937dc6051f79b5c6);
+            
+    
+            var marker_944c5d4779d0b25894e4358cfffcbfb5 = L.marker(
+                [13.0827, 80.2707],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_fef3bd5eaa1f1c1c06104dfb60ea6fc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11903ce7aa66c2e8b9008ae959efa3fc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c64bd5b4663bf717ab2dfa3912538976 = $(`<div id="html_c64bd5b4663bf717ab2dfa3912538976" style="width: 100.0%; height: 100.0%;">     <b>Chennai, Tamil Nadu</b><br>     Postal Code: 600001<br>     Revenue: ₹1,020,000<br>     Users: 4,600<br>     Revenue/User: ₹221.74<br>     Underserved Score: 0.525     </div>`)[0];
+                popup_11903ce7aa66c2e8b9008ae959efa3fc.setContent(html_c64bd5b4663bf717ab2dfa3912538976);
+            
+        
+
+        marker_944c5d4779d0b25894e4358cfffcbfb5.bindPopup(popup_11903ce7aa66c2e8b9008ae959efa3fc)
+        ;
+
+        
+    
+    
+            marker_944c5d4779d0b25894e4358cfffcbfb5.bindTooltip(
+                `<div>
+                     Chennai — ₹1,020,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_944c5d4779d0b25894e4358cfffcbfb5.setIcon(icon_fef3bd5eaa1f1c1c06104dfb60ea6fc0);
+            
+    
+            var marker_12620c3f74eca1718221eb19a654ef9d = L.marker(
+                [11.0168, 76.9558],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_8c7eb65e7e53785fb7dc80c8a9d4f56a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71ebb2617d9d3ed9b00584767513db35 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc1a8312abcfe50634e398333ae3aebb = $(`<div id="html_bc1a8312abcfe50634e398333ae3aebb" style="width: 100.0%; height: 100.0%;">     <b>Coimbatore, Tamil Nadu</b><br>     Postal Code: 641001<br>     Revenue: ₹410,000<br>     Users: 2,700<br>     Revenue/User: ₹151.85<br>     Underserved Score: 0.525     </div>`)[0];
+                popup_71ebb2617d9d3ed9b00584767513db35.setContent(html_bc1a8312abcfe50634e398333ae3aebb);
+            
+        
+
+        marker_12620c3f74eca1718221eb19a654ef9d.bindPopup(popup_71ebb2617d9d3ed9b00584767513db35)
+        ;
+
+        
+    
+    
+            marker_12620c3f74eca1718221eb19a654ef9d.bindTooltip(
+                `<div>
+                     Coimbatore — ₹410,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_12620c3f74eca1718221eb19a654ef9d.setIcon(icon_8c7eb65e7e53785fb7dc80c8a9d4f56a);
+            
+    
+            var marker_fd8c77fb4702db624b0f90a655dc58f6 = L.marker(
+                [26.8467, 80.9462],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_2efdb301b813d387ac0fc8eb19d0079b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6377d75b04c1118d2ead325fbde0d9b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0eca6248c814f85eabc8d836786c7833 = $(`<div id="html_0eca6248c814f85eabc8d836786c7833" style="width: 100.0%; height: 100.0%;">     <b>Lucknow, Uttar Pradesh</b><br>     Postal Code: 226001<br>     Revenue: ₹390,000<br>     Users: 2,800<br>     Revenue/User: ₹139.29<br>     Underserved Score: 0.575     </div>`)[0];
+                popup_6377d75b04c1118d2ead325fbde0d9b6.setContent(html_0eca6248c814f85eabc8d836786c7833);
+            
+        
+
+        marker_fd8c77fb4702db624b0f90a655dc58f6.bindPopup(popup_6377d75b04c1118d2ead325fbde0d9b6)
+        ;
+
+        
+    
+    
+            marker_fd8c77fb4702db624b0f90a655dc58f6.bindTooltip(
+                `<div>
+                     Lucknow — ₹390,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fd8c77fb4702db624b0f90a655dc58f6.setIcon(icon_2efdb301b813d387ac0fc8eb19d0079b);
+            
+    
+            var marker_baa07bf8a95c22e7260ab8453dcc15ee = L.marker(
+                [25.3176, 82.9739],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_15942b1e818451b01cc7202b8b50227e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_95d4a03ac47b7ec25370cf1ca807a7b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_878b9ea65613e04b944e6c79970dc4e5 = $(`<div id="html_878b9ea65613e04b944e6c79970dc4e5" style="width: 100.0%; height: 100.0%;">     <b>Varanasi, Uttar Pradesh</b><br>     Postal Code: 221001<br>     Revenue: ₹125,000<br>     Users: 1,900<br>     Revenue/User: ₹65.79<br>     Underserved Score: 0.550     </div>`)[0];
+                popup_95d4a03ac47b7ec25370cf1ca807a7b6.setContent(html_878b9ea65613e04b944e6c79970dc4e5);
+            
+        
+
+        marker_baa07bf8a95c22e7260ab8453dcc15ee.bindPopup(popup_95d4a03ac47b7ec25370cf1ca807a7b6)
+        ;
+
+        
+    
+    
+            marker_baa07bf8a95c22e7260ab8453dcc15ee.bindTooltip(
+                `<div>
+                     Varanasi — ₹125,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_baa07bf8a95c22e7260ab8453dcc15ee.setIcon(icon_15942b1e818451b01cc7202b8b50227e);
+            
+    
+            var marker_ce5bcb07a94dd401283a9efcfc1b267e = L.marker(
+                [22.5726, 88.3639],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_3ee6ba72558d6338798977af36beeb81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4c66b4073e67d097ac89dad792d812a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3f48bf4127d50f26eb490d434b5ae974 = $(`<div id="html_3f48bf4127d50f26eb490d434b5ae974" style="width: 100.0%; height: 100.0%;">     <b>Kolkata, West Bengal</b><br>     Postal Code: 700001<br>     Revenue: ₹720,000<br>     Users: 3,700<br>     Revenue/User: ₹194.59<br>     Underserved Score: 0.525     </div>`)[0];
+                popup_b4c66b4073e67d097ac89dad792d812a.setContent(html_3f48bf4127d50f26eb490d434b5ae974);
+            
+        
+
+        marker_ce5bcb07a94dd401283a9efcfc1b267e.bindPopup(popup_b4c66b4073e67d097ac89dad792d812a)
+        ;
+
+        
+    
+    
+            marker_ce5bcb07a94dd401283a9efcfc1b267e.bindTooltip(
+                `<div>
+                     Kolkata — ₹720,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ce5bcb07a94dd401283a9efcfc1b267e.setIcon(icon_3ee6ba72558d6338798977af36beeb81);
+            
+    
+            var marker_9236e5888cf57a89d9d9a102b17a0751 = L.marker(
+                [20.2961, 85.8245],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_91d992390f053abd9795f4383a6f4dca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c0d70f47a31ca7a62a232611de9268c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_844fc6acd0eea14e1c1469dbdda36f32 = $(`<div id="html_844fc6acd0eea14e1c1469dbdda36f32" style="width: 100.0%; height: 100.0%;">     <b>Bhubaneswar, Odisha</b><br>     Postal Code: 751001<br>     Revenue: ₹180,000<br>     Users: 2,200<br>     Revenue/User: ₹81.82<br>     Underserved Score: 0.550     </div>`)[0];
+                popup_7c0d70f47a31ca7a62a232611de9268c.setContent(html_844fc6acd0eea14e1c1469dbdda36f32);
+            
+        
+
+        marker_9236e5888cf57a89d9d9a102b17a0751.bindPopup(popup_7c0d70f47a31ca7a62a232611de9268c)
+        ;
+
+        
+    
+    
+            marker_9236e5888cf57a89d9d9a102b17a0751.bindTooltip(
+                `<div>
+                     Bhubaneswar — ₹180,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9236e5888cf57a89d9d9a102b17a0751.setIcon(icon_91d992390f053abd9795f4383a6f4dca);
+            
+    
+            var marker_78296725fae21caa06d52436f12f14d3 = L.marker(
+                [17.385, 78.4867],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_3e0edb40caafd12c73f48bfceef320d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c9ae814fd919942d9c1650098a43ffd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54213ad5438959805e0885e03aeaeaec = $(`<div id="html_54213ad5438959805e0885e03aeaeaec" style="width: 100.0%; height: 100.0%;">     <b>Hyderabad, Telangana</b><br>     Postal Code: 500001<br>     Revenue: ₹850,000<br>     Users: 4,100<br>     Revenue/User: ₹207.32<br>     Underserved Score: 0.525     </div>`)[0];
+                popup_1c9ae814fd919942d9c1650098a43ffd.setContent(html_54213ad5438959805e0885e03aeaeaec);
+            
+        
+
+        marker_78296725fae21caa06d52436f12f14d3.bindPopup(popup_1c9ae814fd919942d9c1650098a43ffd)
+        ;
+
+        
+    
+    
+            marker_78296725fae21caa06d52436f12f14d3.bindTooltip(
+                `<div>
+                     Hyderabad — ₹850,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78296725fae21caa06d52436f12f14d3.setIcon(icon_3e0edb40caafd12c73f48bfceef320d1);
+            
+    
+            var marker_f87f5e4206fa7fbe4111f33d4604176d = L.marker(
+                [9.9312, 76.2673],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_e04a4064678d7b787ebf29b601930368 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5019b23c6de7eaab03af5e0182fcf1a6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_58e46d207d304814e97c206ed4dbdef9 = $(`<div id="html_58e46d207d304814e97c206ed4dbdef9" style="width: 100.0%; height: 100.0%;">     <b>Kochi, Kerala</b><br>     Postal Code: 682001<br>     Revenue: ₹275,000<br>     Users: 2,400<br>     Revenue/User: ₹114.58<br>     Underserved Score: 0.500     </div>`)[0];
+                popup_5019b23c6de7eaab03af5e0182fcf1a6.setContent(html_58e46d207d304814e97c206ed4dbdef9);
+            
+        
+
+        marker_f87f5e4206fa7fbe4111f33d4604176d.bindPopup(popup_5019b23c6de7eaab03af5e0182fcf1a6)
+        ;
+
+        
+    
+    
+            marker_f87f5e4206fa7fbe4111f33d4604176d.bindTooltip(
+                `<div>
+                     Kochi — ₹275,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f87f5e4206fa7fbe4111f33d4604176d.setIcon(icon_e04a4064678d7b787ebf29b601930368);
+            
+    
+            var marker_67cad33098abc1b797e29e55759cbb7f = L.marker(
+                [25.5941, 85.1376],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_a792bfce92b6db0c72d8341e91eeee04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c235dc6422c8b5913852765e4c0fe584 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_73df6c9e12ff4b60e1fe4c364c75716c = $(`<div id="html_73df6c9e12ff4b60e1fe4c364c75716c" style="width: 100.0%; height: 100.0%;">     <b>Patna, Bihar</b><br>     Postal Code: 800001<br>     Revenue: ₹210,000<br>     Users: 2,500<br>     Revenue/User: ₹84.00<br>     Underserved Score: 0.600     </div>`)[0];
+                popup_c235dc6422c8b5913852765e4c0fe584.setContent(html_73df6c9e12ff4b60e1fe4c364c75716c);
+            
+        
+
+        marker_67cad33098abc1b797e29e55759cbb7f.bindPopup(popup_c235dc6422c8b5913852765e4c0fe584)
+        ;
+
+        
+    
+    
+            marker_67cad33098abc1b797e29e55759cbb7f.bindTooltip(
+                `<div>
+                     Patna — ₹210,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_67cad33098abc1b797e29e55759cbb7f.setIcon(icon_a792bfce92b6db0c72d8341e91eeee04);
+            
+    
+            var marker_f14231334116c656030980cd1fde9e95 = L.marker(
+                [31.634, 74.8723],
+                {
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var icon_4b392f1421de1bf20ceadd82b99d0c01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae5e7f5b1b617335846c54125714383c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c9063aed15212d63093aeaab5570b1e = $(`<div id="html_9c9063aed15212d63093aeaab5570b1e" style="width: 100.0%; height: 100.0%;">     <b>Amritsar, Punjab</b><br>     Postal Code: 143001<br>     Revenue: ₹135,000<br>     Users: 1,800<br>     Revenue/User: ₹75.00<br>     Underserved Score: 0.500     </div>`)[0];
+                popup_ae5e7f5b1b617335846c54125714383c.setContent(html_9c9063aed15212d63093aeaab5570b1e);
+            
+        
+
+        marker_f14231334116c656030980cd1fde9e95.bindPopup(popup_ae5e7f5b1b617335846c54125714383c)
+        ;
+
+        
+    
+    
+            marker_f14231334116c656030980cd1fde9e95.bindTooltip(
+                `<div>
+                     Amritsar — ₹135,000 revenue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f14231334116c656030980cd1fde9e95.setIcon(icon_4b392f1421de1bf20ceadd82b99d0c01);
+            
+    
+            var heat_map_2c4cec50726b0e1b2fbc36c5f0d4971e = L.heatLayer(
+                [[19.076, 72.8777, 5200.0], [18.5204, 73.8567, 4300.0], [23.0225, 72.5714, 3500.0], [21.1702, 72.8311, 3200.0], [22.7196, 75.8577, 2600.0], [23.2599, 77.4126, 2300.0], [26.9124, 75.7873, 2900.0], [24.5854, 73.7125, 1700.0], [12.9716, 77.5946, 5100.0], [12.2958, 76.6394, 2100.0], [13.0827, 80.2707, 4600.0], [11.0168, 76.9558, 2700.0], [26.8467, 80.9462, 2800.0], [25.3176, 82.9739, 1900.0], [22.5726, 88.3639, 3700.0], [20.2961, 85.8245, 2200.0], [17.385, 78.4867, 4100.0], [9.9312, 76.2673, 2400.0], [25.5941, 85.1376, 2500.0], [31.634, 74.8723, 1800.0]],
+                {
+  "minOpacity": 0.25,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 18,
+}
+            );
+        
+    
+            heat_map_2c4cec50726b0e1b2fbc36c5f0d4971e.addTo(map_6f0fb7303963acb29af25de54252bb46);
+        
+    
+            var layer_control_907803f761e004a757b714886240e2a8_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_24a65b6262069a964fb3c9750574609d,
+                },
+                overlays :  {
+                    "macro_element_2c4cec50726b0e1b2fbc36c5f0d4971e" : heat_map_2c4cec50726b0e1b2fbc36c5f0d4971e,
+                },
+            };
+            let layer_control_907803f761e004a757b714886240e2a8 = L.control.layers(
+                layer_control_907803f761e004a757b714886240e2a8_layers.base_layers,
+                layer_control_907803f761e004a757b714886240e2a8_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_6f0fb7303963acb29af25de54252bb46);
+
+        
+</script>
+</html>
